@@ -6,6 +6,12 @@
 
 React Native native-module library for floating bubble UI overlays and quick actions.
 
+> **Native React Native Library:** this package is a native bridge library (Android/iOS), not a pure JavaScript-only component.
+
+<p align="center">
+  <img src="./preview.gif" alt="Floating bubble demo preview" width="280" />
+</p>
+
 ## Language / Idioma
 - [English](#english)
 - [Portugues](#portugues)
@@ -13,6 +19,8 @@ React Native native-module library for floating bubble UI overlays and quick act
 ## English
 ### Overview
 This package provides floating bubble capabilities for React Native, enabling messenger-style overlay interactions.
+
+**Important:** this repository is a **native React Native library**, with platform-level implementation for Android and iOS.
 
 ### Core Features
 - Floating bubble rendering
@@ -35,6 +43,8 @@ Use the library package from `library/` in your React Native app.
 ## Portugues
 ### Visao Geral
 Este pacote adiciona funcionalidade de bolha flutuante para React Native, permitindo interacoes em overlay no estilo messenger.
+
+**Importante:** este repositorio e uma **biblioteca nativa React Native**, com implementacao em nivel de plataforma para Android e iOS.
 
 ### Funcionalidades Principais
 - Renderizacao de bolha flutuante
