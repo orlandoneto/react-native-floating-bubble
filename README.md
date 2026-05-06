@@ -1,95 +1,55 @@
+﻿# React Native Floating Bubble
 
-# react-native-floating-bubble
+[![React Native](https://img.shields.io/badge/React_Native-Library-61DAFB?style=for-the-badge&logo=react)](https://reactnative.dev/)
+[![Android](https://img.shields.io/badge/Android-Overlay_UI-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://developer.android.com/)
+[![iOS](https://img.shields.io/badge/iOS-Supported-000000?style=for-the-badge&logo=apple&logoColor=white)](https://developer.apple.com/)
 
+React Native native-module library for floating bubble UI overlays and quick actions.
 
-A simple Facebook Chat Head like bubble for react native. Special thanks to [bubble-for-android](https://github.com/txusballesteros/bubbles-for-android) because this is just react native wrapper for that library. 
+## Language / Idioma
+- [English](#english)
+- [Portugues](#portugues)
 
-![Preview](https://github.com/hybriteq/react-native-floating-bubble/raw/master/preview.gif)
+## English
+### Overview
+This package provides floating bubble capabilities for React Native, enabling messenger-style overlay interactions.
 
+### Core Features
+- Floating bubble rendering
+- Draggable overlay interactions
+- Native module bridge support
+- Test app for integration validation
 
+### Tech Stack
+- React Native package architecture
+- Android native module implementation
+- iOS native module implementation
 
-
-## Installation
-
-`$ npm install react-native-floating-bubble --save`
-
-### Mostly automatic installation
-
-`$ react-native link react-native-floating-bubble`
-
-### Manual installation
-
-
-#### Android
-
-1. Open up `android/app/src/main/java/[...]/MainActivity.java`
-  - Add `import com.reactlibrary.RNFloatingBubblePackage;` to the imports at the top of the file
-  - Add `new RNFloatingBubblePackage()` to the list returned by the `getPackages()` method
-2. Append the following lines to `android/settings.gradle`:
-  	```
-  	include ':react-native-floating-bubble'
-  	project(':react-native-floating-bubble').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-floating-bubble/android')
-  	```
-3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-  	```
-      compile project(':react-native-floating-bubble')
-  	```
-
-
-#### iOS
-
-1. This library is not supported for iOS. This functionality is not there.
-
-## Usage
-
-### Methods
-
-```javascript
-import { showFloatingBubble, hideFloatingBubble, requestPermission, initialize } from "react-native-floating-bubble"
-
-// To display the bubble over other apps you need to get 'Draw Over Other Apps' permission from androind.
-// If you initialize without having the permission App could crash
-requestPermission()
-	.then(() => console.log("Permission Granted"))
-	.catch(() => console.log("Permission is not granted"))
-	
-// Initialize bubble manage
-initialize()
-	.then(() => console.log("Initialized the bubble mange"))
-
-
-// Show Floating Bubble: x=10, y=10 position of the bubble
-showFloatingBubble(10, 10)
-	.then(() => console.log("Floating Bubble Added"));
-
-// Hide Floatin Bubble
-hideFloatingBubble()
-	.then(() => console.log("Floating Bubble Removed"));
+### Getting Started
+```bash
+cd library
+npm install
 ```
-### Events
+Use the library package from `library/` in your React Native app.
 
-You can listen to bubble press and bubble remove events using `DeviceEventEmitter`. 
+## Portugues
+### Visao Geral
+Este pacote adiciona funcionalidade de bolha flutuante para React Native, permitindo interacoes em overlay no estilo messenger.
 
-Events: `floating-bubble-press`, `floating-bubble-remove`
+### Funcionalidades Principais
+- Renderizacao de bolha flutuante
+- Interacoes de arrastar e soltar em overlay
+- Suporte por bridge de modulo nativo
+- App de teste para validacao de integracao
 
-```javascript
-    DeviceEventEmitter.addListener("floating-bubble-press", (e) => {
-		// What to do when user press the bubble
-		console.log("Press Bubble")
-    });
-    DeviceEventEmitter.addListener("floating-bubble-remove", (e) => {
-		// What to do when user removes the bubble
-		console.log("Remove Bubble")
-    });
+### Stack Tecnologica
+- Arquitetura de pacote React Native
+- Implementacao de modulo nativo Android
+- Implementacao de modulo nativo iOS
+
+### Como Executar
+```bash
+cd library
+npm install
 ```
-
-
-  ### Change Bubble Icon
-
- Place the icon file as `android/app/src/main/res/drawable/bubble_icon.png` 
- 
-
- ## Contribute 
-
- If you want to contribute the source code is here.
-  https://github.com/hybriteq/react-native-floating-bubble
+Use o pacote da pasta `library/` no app React Native.
