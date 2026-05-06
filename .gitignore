@@ -1,0 +1,14 @@
+node_modules/
+.env
+.env.*
+*.log
+yarn-error.log
+dist/
+build/
+.DS_Store
+.idea/
+.vscode/
+.expo/
+.expo-shared/
+android/.gradle/
+ios/Pods/
